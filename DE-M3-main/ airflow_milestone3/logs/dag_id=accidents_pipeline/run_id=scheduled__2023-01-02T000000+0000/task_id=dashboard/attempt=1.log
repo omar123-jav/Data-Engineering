@@ -1,0 +1,249 @@
+[2023-01-04T11:40:11.779+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.dashboard scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-04T11:40:11.797+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.dashboard scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-04T11:40:11.798+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-04T11:40:11.798+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2023-01-04T11:40:11.799+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-04T11:40:11.821+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): dashboard> on 2023-01-02 00:00:00+00:00
+[2023-01-04T11:40:11.828+0000] {standard_task_runner.py:55} INFO - Started process 858 to run task
+[2023-01-04T11:40:11.833+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'accidents_pipeline', 'dashboard', 'scheduled__2023-01-02T00:00:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/Airflow.py', '--cfg-path', '/tmp/tmpeo_vic2m']
+[2023-01-04T11:40:11.836+0000] {standard_task_runner.py:83} INFO - Job 9: Subtask dashboard
+[2023-01-04T11:40:11.927+0000] {task_command.py:389} INFO - Running <TaskInstance: accidents_pipeline.dashboard scheduled__2023-01-02T00:00:00+00:00 [running]> on host 110f611c23f4
+[2023-01-04T11:40:12.028+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=accidents_pipeline
+AIRFLOW_CTX_TASK_ID=dashboard
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-02T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-02T00:00:00+00:00
+[2023-01-04T11:40:15.133+0000] {logging_mixin.py:137} INFO - Dash is running on http://0.0.0.0:8020/
+[2023-01-04T11:40:15.133+0000] {dash.py:1968} INFO - Dash is running on http://0.0.0.0:8020/
+
+[2023-01-04T11:40:15.149+0000] {logging_mixin.py:137} INFO -  * Serving Flask app '***'
+[2023-01-04T11:40:15.150+0000] {logging_mixin.py:137} INFO -  * Debug mode: off
+[2023-01-04T11:40:15.151+0000] {_internal.py:224} INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8020
+ * Running on http://172.18.0.3:8020
+[2023-01-04T11:40:15.152+0000] {_internal.py:224} INFO - [33mPress CTRL+C to quit[0m
+[2023-01-04T11:40:24.941+0000] {_internal.py:224} INFO - 172.18.0.1 - - [04/Jan/2023 11:40:24] "GET / HTTP/1.1" 200 -
+[2023-01-04T11:40:24.982+0000] {_internal.py:224} INFO - 172.18.0.1 - - [04/Jan/2023 11:40:24] "GET /favicon.ico HTTP/1.1" 200 -
+[2023-01-04T11:40:25.556+0000] {_internal.py:224} INFO - 172.18.0.1 - - [04/Jan/2023 11:40:25] "GET /_dash-dependencies HTTP/1.1" 200 -
+[2023-01-04T11:40:25.759+0000] {_internal.py:224} INFO - 172.18.0.1 - - [04/Jan/2023 11:40:25] "GET /_dash-layout HTTP/1.1" 200 -
+[2023-01-04T11:40:25.819+0000] {_internal.py:224} INFO - 172.18.0.1 - - [04/Jan/2023 11:40:25] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+[2023-01-04T11:40:25.827+0000] {_internal.py:224} INFO - 172.18.0.1 - - [04/Jan/2023 11:40:25] "[36mGET /_dash-component-suites/dash/dcc/async-plotlyjs.js HTTP/1.1[0m" 304 -
+[2023-01-04T11:50:08.971+0000] {local_task_job.py:224} WARNING - State of this instance has been externally set to None. Terminating instance.
+[2023-01-04T11:50:08.975+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 858. PIDs of all processes in the group: [858]
+[2023-01-04T11:50:08.976+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 858
+[2023-01-04T11:50:08.977+0000] {taskinstance.py:1483} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-01-04T11:50:08.992+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/Dashboard.py", line 76, in dashboard
+    app.run_server(debug=False,host='0.0.0.0',port=8020)
+  File "/home/airflow/.local/lib/python3.7/site-packages/dash/dash.py", line 2133, in run_server
+    self.run(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/dash/dash.py", line 1980, in run
+    self.server.run(host=host, port=port, debug=debug, **flask_run_options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/flask/app.py", line 1188, in run
+    run_simple(t.cast(str, host), port, self, **options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/werkzeug/serving.py", line 1098, in run_simple
+    srv.serve_forever()
+  File "/home/airflow/.local/lib/python3.7/site-packages/werkzeug/serving.py", line 741, in serve_forever
+    super().serve_forever(poll_interval=poll_interval)
+  File "/usr/local/lib/python3.7/socketserver.py", line 232, in serve_forever
+    ready = selector.select(poll_interval)
+  File "/usr/local/lib/python3.7/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1485, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2023-01-04T11:50:09.003+0000] {taskinstance.py:1327} INFO - Marking task as FAILED. dag_id=accidents_pipeline, task_id=dashboard, execution_date=20230102T000000, start_date=20230104T114011, end_date=20230104T115009
+[2023-01-04T11:50:09.018+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 9 for task dashboard ((psycopg2.errors.ForeignKeyViolation) insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(accidents_pipeline, dashboard, scheduled__2023-01-02T00:00:00+00:00, -1) is not present in table "task_instance".
+
+[SQL: INSERT INTO task_fail (task_id, dag_id, run_id, map_index, start_date, end_date, duration) VALUES (%(task_id)s, %(dag_id)s, %(run_id)s, %(map_index)s, %(start_date)s, %(end_date)s, %(duration)s) RETURNING task_fail.id]
+[parameters: {'task_id': 'dashboard', 'dag_id': 'accidents_pipeline', 'run_id': 'scheduled__2023-01-02T00:00:00+00:00', 'map_index': -1, 'start_date': datetime.datetime(2023, 1, 4, 11, 40, 11, 781491, tzinfo=Timezone('UTC')), 'end_date': datetime.datetime(2023, 1, 4, 11, 50, 9, 2544, tzinfo=Timezone('UTC')), 'duration': 597}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj); 858)
+[2023-01-04T11:50:09.069+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=858, status='terminated', exitcode=1, started='11:40:10') (858) terminated with exit code 1
+[2023-01-04T12:04:20.095+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.dashboard scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-04T12:04:20.210+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.dashboard scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-04T12:04:20.211+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-04T12:04:20.212+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2023-01-04T12:04:20.213+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-04T12:04:20.241+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): dashboard> on 2023-01-02 00:00:00+00:00
+[2023-01-04T12:04:20.250+0000] {standard_task_runner.py:55} INFO - Started process 1387 to run task
+[2023-01-04T12:04:20.257+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'accidents_pipeline', 'dashboard', 'scheduled__2023-01-02T00:00:00+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/Airflow.py', '--cfg-path', '/tmp/tmpk3la2194']
+[2023-01-04T12:04:20.261+0000] {standard_task_runner.py:83} INFO - Job 18: Subtask dashboard
+[2023-01-04T12:04:20.395+0000] {task_command.py:389} INFO - Running <TaskInstance: accidents_pipeline.dashboard scheduled__2023-01-02T00:00:00+00:00 [running]> on host 0eb9bfbdd4ca
+[2023-01-04T12:04:20.574+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=accidents_pipeline
+AIRFLOW_CTX_TASK_ID=dashboard
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-02T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-02T00:00:00+00:00
+[2023-01-04T12:04:25.655+0000] {logging_mixin.py:137} INFO - Dash is running on http://0.0.0.0:8020/
+[2023-01-04T12:04:25.655+0000] {dash.py:1968} INFO - Dash is running on http://0.0.0.0:8020/
+
+[2023-01-04T12:04:25.681+0000] {logging_mixin.py:137} INFO -  * Serving Flask app '***'
+[2023-01-04T12:04:25.682+0000] {logging_mixin.py:137} INFO -  * Debug mode: off
+[2023-01-04T12:04:25.684+0000] {_internal.py:224} INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8020
+ * Running on http://172.18.0.4:8020
+[2023-01-04T12:04:25.685+0000] {_internal.py:224} INFO - [33mPress CTRL+C to quit[0m
+[2023-01-04T12:04:43.293+0000] {_internal.py:224} INFO - 172.18.0.1 - - [04/Jan/2023 12:04:43] "GET / HTTP/1.1" 200 -
+[2023-01-04T12:04:43.522+0000] {_internal.py:224} INFO - 172.18.0.1 - - [04/Jan/2023 12:04:43] "GET /_dash-dependencies HTTP/1.1" 200 -
+[2023-01-04T12:04:43.530+0000] {_internal.py:224} INFO - 172.18.0.1 - - [04/Jan/2023 12:04:43] "GET /_favicon.ico?v=2.7.1 HTTP/1.1" 200 -
+[2023-01-04T12:04:43.762+0000] {_internal.py:224} INFO - 172.18.0.1 - - [04/Jan/2023 12:04:43] "GET /_dash-layout HTTP/1.1" 200 -
+[2023-01-04T12:04:43.829+0000] {_internal.py:224} INFO - 172.18.0.1 - - [04/Jan/2023 12:04:43] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+[2023-01-04T12:04:43.837+0000] {_internal.py:224} INFO - 172.18.0.1 - - [04/Jan/2023 12:04:43] "[36mGET /_dash-component-suites/dash/dcc/async-plotlyjs.js HTTP/1.1[0m" 304 -
+[2023-01-04T12:13:42.533+0000] {local_task_job.py:224} WARNING - State of this instance has been externally set to success. Terminating instance.
+[2023-01-04T12:13:42.537+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 1387. PIDs of all processes in the group: [1387]
+[2023-01-04T12:13:42.538+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 1387
+[2023-01-04T12:13:42.538+0000] {taskinstance.py:1483} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-01-04T12:13:42.590+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=1387, status='terminated', exitcode=0, started='12:04:19') (1387) terminated with exit code 0
+[2023-01-04T12:29:18.643+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.dashboard scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-04T12:29:18.729+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.dashboard scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-04T12:29:18.730+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-04T12:29:18.730+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2023-01-04T12:29:18.731+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-04T12:29:18.748+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): dashboard> on 2023-01-02 00:00:00+00:00
+[2023-01-04T12:29:18.754+0000] {standard_task_runner.py:55} INFO - Started process 4010 to run task
+[2023-01-04T12:29:18.757+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'accidents_pipeline', 'dashboard', 'scheduled__2023-01-02T00:00:00+00:00', '--job-id', '36', '--raw', '--subdir', 'DAGS_FOLDER/Airflow.py', '--cfg-path', '/tmp/tmp5zq47l39']
+[2023-01-04T12:29:18.760+0000] {standard_task_runner.py:83} INFO - Job 36: Subtask dashboard
+[2023-01-04T12:29:18.826+0000] {task_command.py:389} INFO - Running <TaskInstance: accidents_pipeline.dashboard scheduled__2023-01-02T00:00:00+00:00 [running]> on host 0eb9bfbdd4ca
+[2023-01-04T12:29:18.897+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=accidents_pipeline
+AIRFLOW_CTX_TASK_ID=dashboard
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-02T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-02T00:00:00+00:00
+[2023-01-04T12:29:21.739+0000] {logging_mixin.py:137} INFO - Dash is running on http://0.0.0.0:8020/
+[2023-01-04T12:29:21.739+0000] {dash.py:1968} INFO - Dash is running on http://0.0.0.0:8020/
+
+[2023-01-04T12:29:21.749+0000] {logging_mixin.py:137} INFO -  * Serving Flask app '***'
+[2023-01-04T12:29:21.750+0000] {logging_mixin.py:137} INFO -  * Debug mode: off
+[2023-01-04T12:29:21.752+0000] {_internal.py:224} INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8020
+ * Running on http://172.18.0.4:8020
+[2023-01-04T12:29:21.752+0000] {_internal.py:224} INFO - [33mPress CTRL+C to quit[0m
+[2023-01-04T12:30:11.750+0000] {_internal.py:224} INFO - 172.18.0.1 - - [04/Jan/2023 12:30:11] "GET / HTTP/1.1" 200 -
+[2023-01-04T12:30:11.964+0000] {_internal.py:224} INFO - 172.18.0.1 - - [04/Jan/2023 12:30:11] "GET /_dash-dependencies HTTP/1.1" 200 -
+[2023-01-04T12:30:12.195+0000] {_internal.py:224} INFO - 172.18.0.1 - - [04/Jan/2023 12:30:12] "GET /_dash-layout HTTP/1.1" 200 -
+[2023-01-04T12:30:12.259+0000] {_internal.py:224} INFO - 172.18.0.1 - - [04/Jan/2023 12:30:12] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+[2023-01-04T12:30:12.268+0000] {_internal.py:224} INFO - 172.18.0.1 - - [04/Jan/2023 12:30:12] "[36mGET /_dash-component-suites/dash/dcc/async-plotlyjs.js HTTP/1.1[0m" 304 -
+[2023-01-04T12:31:15.122+0000] {local_task_job.py:224} WARNING - State of this instance has been externally set to None. Terminating instance.
+[2023-01-04T12:31:15.125+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 4010. PIDs of all processes in the group: [4010]
+[2023-01-04T12:31:15.125+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 4010
+[2023-01-04T12:31:15.126+0000] {taskinstance.py:1483} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-01-04T12:31:15.134+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/Dashboard.py", line 76, in dashboard
+    app.run_server(debug=False,host='0.0.0.0',port=8020)
+  File "/home/airflow/.local/lib/python3.7/site-packages/dash/dash.py", line 2133, in run_server
+    self.run(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/dash/dash.py", line 1980, in run
+    self.server.run(host=host, port=port, debug=debug, **flask_run_options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/flask/app.py", line 1188, in run
+    run_simple(t.cast(str, host), port, self, **options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/werkzeug/serving.py", line 1098, in run_simple
+    srv.serve_forever()
+  File "/home/airflow/.local/lib/python3.7/site-packages/werkzeug/serving.py", line 741, in serve_forever
+    super().serve_forever(poll_interval=poll_interval)
+  File "/usr/local/lib/python3.7/socketserver.py", line 232, in serve_forever
+    ready = selector.select(poll_interval)
+  File "/usr/local/lib/python3.7/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1485, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2023-01-04T12:31:15.143+0000] {taskinstance.py:1327} INFO - Marking task as FAILED. dag_id=accidents_pipeline, task_id=dashboard, execution_date=20230102T000000, start_date=20230104T122918, end_date=20230104T123115
+[2023-01-04T12:31:15.155+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 36 for task dashboard ((psycopg2.errors.ForeignKeyViolation) insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(accidents_pipeline, dashboard, scheduled__2023-01-02T00:00:00+00:00, -1) is not present in table "task_instance".
+
+[SQL: INSERT INTO task_fail (task_id, dag_id, run_id, map_index, start_date, end_date, duration) VALUES (%(task_id)s, %(dag_id)s, %(run_id)s, %(map_index)s, %(start_date)s, %(end_date)s, %(duration)s) RETURNING task_fail.id]
+[parameters: {'task_id': 'dashboard', 'dag_id': 'accidents_pipeline', 'run_id': 'scheduled__2023-01-02T00:00:00+00:00', 'map_index': -1, 'start_date': datetime.datetime(2023, 1, 4, 12, 29, 18, 719983, tzinfo=Timezone('UTC')), 'end_date': datetime.datetime(2023, 1, 4, 12, 31, 15, 142995, tzinfo=Timezone('UTC')), 'duration': 116}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj); 4010)
+[2023-01-04T12:31:15.178+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=4010, status='terminated', exitcode=1, started='12:29:17') (4010) terminated with exit code 1
+[2023-01-04T13:43:33.203+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.Dashboard scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-04T13:43:33.302+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.Dashboard scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-04T13:43:33.302+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-04T13:43:33.303+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2023-01-04T13:43:33.303+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-04T13:43:33.320+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): Dashboard> on 2023-01-02 00:00:00+00:00
+[2023-01-04T13:43:33.326+0000] {standard_task_runner.py:55} INFO - Started process 719 to run task
+[2023-01-04T13:43:33.330+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'accidents_pipeline', 'Dashboard', 'scheduled__2023-01-02T00:00:00+00:00', '--job-id', '45', '--raw', '--subdir', 'DAGS_FOLDER/Airflow.py', '--cfg-path', '/tmp/tmppy6f4eur']
+[2023-01-04T13:43:33.333+0000] {standard_task_runner.py:83} INFO - Job 45: Subtask Dashboard
+[2023-01-04T13:43:33.407+0000] {task_command.py:389} INFO - Running <TaskInstance: accidents_pipeline.Dashboard scheduled__2023-01-02T00:00:00+00:00 [running]> on host 980a01aa00ba
+[2023-01-04T13:43:33.494+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=accidents_pipeline
+AIRFLOW_CTX_TASK_ID=Dashboard
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-02T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-02T00:00:00+00:00
+[2023-01-04T13:43:37.347+0000] {logging_mixin.py:137} INFO - Dash is running on http://0.0.0.0:8020/
+[2023-01-04T13:43:37.347+0000] {dash.py:1968} INFO - Dash is running on http://0.0.0.0:8020/
+
+[2023-01-04T13:43:37.361+0000] {logging_mixin.py:137} INFO -  * Serving Flask app '***'
+[2023-01-04T13:43:37.362+0000] {logging_mixin.py:137} INFO -  * Debug mode: off
+[2023-01-04T13:43:37.364+0000] {_internal.py:224} INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8020
+ * Running on http://172.20.0.6:8020
+[2023-01-04T13:43:37.365+0000] {_internal.py:224} INFO - [33mPress CTRL+C to quit[0m
+[2023-01-04T14:05:51.169+0000] {local_task_job.py:224} WARNING - State of this instance has been externally set to None. Terminating instance.
+[2023-01-04T14:05:51.222+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 719. PIDs of all processes in the group: [719]
+[2023-01-04T14:05:51.225+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 719
+[2023-01-04T14:05:51.246+0000] {taskinstance.py:1483} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-01-04T14:05:51.450+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/Dashboard.py", line 76, in dashboard
+    app.run_server(debug=False,host='0.0.0.0',port=8020)
+  File "/home/airflow/.local/lib/python3.7/site-packages/dash/dash.py", line 2133, in run_server
+    self.run(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/dash/dash.py", line 1980, in run
+    self.server.run(host=host, port=port, debug=debug, **flask_run_options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/flask/app.py", line 1188, in run
+    run_simple(t.cast(str, host), port, self, **options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/werkzeug/serving.py", line 1098, in run_simple
+    srv.serve_forever()
+  File "/home/airflow/.local/lib/python3.7/site-packages/werkzeug/serving.py", line 741, in serve_forever
+    super().serve_forever(poll_interval=poll_interval)
+  File "/usr/local/lib/python3.7/socketserver.py", line 232, in serve_forever
+    ready = selector.select(poll_interval)
+  File "/usr/local/lib/python3.7/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1485, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2023-01-04T14:05:51.495+0000] {taskinstance.py:1327} INFO - Marking task as FAILED. dag_id=accidents_pipeline, task_id=Dashboard, execution_date=20230102T000000, start_date=20230104T134333, end_date=20230104T140551
+[2023-01-04T14:05:51.592+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 45 for task Dashboard ((psycopg2.errors.ForeignKeyViolation) insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(accidents_pipeline, Dashboard, scheduled__2023-01-02T00:00:00+00:00, -1) is not present in table "task_instance".
+
+[SQL: INSERT INTO task_fail (task_id, dag_id, run_id, map_index, start_date, end_date, duration) VALUES (%(task_id)s, %(dag_id)s, %(run_id)s, %(map_index)s, %(start_date)s, %(end_date)s, %(duration)s) RETURNING task_fail.id]
+[parameters: {'task_id': 'Dashboard', 'dag_id': 'accidents_pipeline', 'run_id': 'scheduled__2023-01-02T00:00:00+00:00', 'map_index': -1, 'start_date': datetime.datetime(2023, 1, 4, 13, 43, 33, 292081, tzinfo=Timezone('UTC')), 'end_date': datetime.datetime(2023, 1, 4, 14, 5, 51, 483492, tzinfo=Timezone('UTC')), 'duration': 1338}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj); 719)
+[2023-01-04T14:05:51.642+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=719, status='terminated', exitcode=1, started='13:43:32') (719) terminated with exit code 1

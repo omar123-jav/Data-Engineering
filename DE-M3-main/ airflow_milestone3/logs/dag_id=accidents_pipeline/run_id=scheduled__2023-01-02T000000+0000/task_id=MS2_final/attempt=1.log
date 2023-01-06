@@ -1,0 +1,72 @@
+[2023-01-04T11:39:19.965+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.MS2_final scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-04T11:39:19.976+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.MS2_final scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-04T11:39:19.977+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-04T11:39:19.978+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2023-01-04T11:39:19.978+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-04T11:39:19.996+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): MS2_final> on 2023-01-02 00:00:00+00:00
+[2023-01-04T11:39:20.002+0000] {standard_task_runner.py:55} INFO - Started process 760 to run task
+[2023-01-04T11:39:20.006+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'accidents_pipeline', 'MS2_final', 'scheduled__2023-01-02T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/Airflow.py', '--cfg-path', '/tmp/tmpm05tiyy7']
+[2023-01-04T11:39:20.008+0000] {standard_task_runner.py:83} INFO - Job 7: Subtask MS2_final
+[2023-01-04T11:39:20.078+0000] {task_command.py:389} INFO - Running <TaskInstance: accidents_pipeline.MS2_final scheduled__2023-01-02T00:00:00+00:00 [running]> on host 110f611c23f4
+[2023-01-04T11:39:20.154+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=accidents_pipeline
+AIRFLOW_CTX_TASK_ID=MS2_final
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-02T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-02T00:00:00+00:00
+[2023-01-04T11:39:21.024+0000] {logging_mixin.py:137} WARNING - /opt/***/dags/Airflow.py:480 FutureWarning: Indexing with multiple keys (implicitly converted to a tuple of keys) will be deprecated, use a list instead.
+[2023-01-04T11:39:23.377+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-01-04T11:39:23.388+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=accidents_pipeline, task_id=MS2_final, execution_date=20230102T000000, start_date=20230104T113919, end_date=20230104T113923
+[2023-01-04T11:39:23.430+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-04T11:39:23.462+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-01-04T12:03:17.420+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.MS2_final scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-04T12:03:17.528+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.MS2_final scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-04T12:03:17.529+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-04T12:03:17.530+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2023-01-04T12:03:17.531+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-04T12:03:17.556+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): MS2_final> on 2023-01-02 00:00:00+00:00
+[2023-01-04T12:03:17.564+0000] {standard_task_runner.py:55} INFO - Started process 1273 to run task
+[2023-01-04T12:03:17.570+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'accidents_pipeline', 'MS2_final', 'scheduled__2023-01-02T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/Airflow.py', '--cfg-path', '/tmp/tmp74gvff7h']
+[2023-01-04T12:03:17.574+0000] {standard_task_runner.py:83} INFO - Job 16: Subtask MS2_final
+[2023-01-04T12:03:17.696+0000] {task_command.py:389} INFO - Running <TaskInstance: accidents_pipeline.MS2_final scheduled__2023-01-02T00:00:00+00:00 [running]> on host 0eb9bfbdd4ca
+[2023-01-04T12:03:17.806+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=accidents_pipeline
+AIRFLOW_CTX_TASK_ID=MS2_final
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-02T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-02T00:00:00+00:00
+[2023-01-04T12:03:18.896+0000] {logging_mixin.py:137} WARNING - /opt/***/dags/Airflow.py:480 FutureWarning: Indexing with multiple keys (implicitly converted to a tuple of keys) will be deprecated, use a list instead.
+[2023-01-04T12:03:21.914+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-01-04T12:03:21.929+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=accidents_pipeline, task_id=MS2_final, execution_date=20230102T000000, start_date=20230104T120317, end_date=20230104T120321
+[2023-01-04T12:03:21.997+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-04T12:03:22.046+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-01-04T12:28:28.793+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.MS2_final scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-04T12:28:28.904+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.MS2_final scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-04T12:28:28.904+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-04T12:28:28.905+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2023-01-04T12:28:28.905+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-04T12:28:28.922+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): MS2_final> on 2023-01-02 00:00:00+00:00
+[2023-01-04T12:28:28.929+0000] {standard_task_runner.py:55} INFO - Started process 3918 to run task
+[2023-01-04T12:28:28.933+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'accidents_pipeline', 'MS2_final', 'scheduled__2023-01-02T00:00:00+00:00', '--job-id', '34', '--raw', '--subdir', 'DAGS_FOLDER/Airflow.py', '--cfg-path', '/tmp/tmp35_43q4h']
+[2023-01-04T12:28:28.935+0000] {standard_task_runner.py:83} INFO - Job 34: Subtask MS2_final
+[2023-01-04T12:28:29.077+0000] {task_command.py:389} INFO - Running <TaskInstance: accidents_pipeline.MS2_final scheduled__2023-01-02T00:00:00+00:00 [running]> on host 0eb9bfbdd4ca
+[2023-01-04T12:28:29.167+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=accidents_pipeline
+AIRFLOW_CTX_TASK_ID=MS2_final
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-02T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-02T00:00:00+00:00
+[2023-01-04T12:28:30.104+0000] {logging_mixin.py:137} WARNING - /opt/***/dags/Airflow.py:480 FutureWarning: Indexing with multiple keys (implicitly converted to a tuple of keys) will be deprecated, use a list instead.
+[2023-01-04T12:28:33.548+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-01-04T12:28:33.561+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=accidents_pipeline, task_id=MS2_final, execution_date=20230102T000000, start_date=20230104T122828, end_date=20230104T122833
+[2023-01-04T12:28:33.603+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-04T12:28:33.638+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check

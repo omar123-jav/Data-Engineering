@@ -1,0 +1,150 @@
+[2023-01-04T11:39:00.507+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.encoding scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-04T11:39:00.524+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.encoding scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-04T11:39:00.525+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-04T11:39:00.525+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2023-01-04T11:39:00.526+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-04T11:39:00.550+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): encoding> on 2023-01-02 00:00:00+00:00
+[2023-01-04T11:39:00.559+0000] {standard_task_runner.py:55} INFO - Started process 705 to run task
+[2023-01-04T11:39:00.565+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'accidents_pipeline', 'encoding', 'scheduled__2023-01-02T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/Airflow.py', '--cfg-path', '/tmp/tmplc7as5be']
+[2023-01-04T11:39:00.568+0000] {standard_task_runner.py:83} INFO - Job 4: Subtask encoding
+[2023-01-04T11:39:00.669+0000] {task_command.py:389} INFO - Running <TaskInstance: accidents_pipeline.encoding scheduled__2023-01-02T00:00:00+00:00 [running]> on host 110f611c23f4
+[2023-01-04T11:39:00.769+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=accidents_pipeline
+AIRFLOW_CTX_TASK_ID=encoding
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-02T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-02T00:00:00+00:00
+[2023-01-04T11:39:01.771+0000] {logging_mixin.py:137} INFO -                 accident_year         police_force  ...   latitude  week_number
+accident_index                                      ...                        
+201101BS70001            2011  Metropolitan Police  ...  51.495766            2
+201101BS70002            2011  Metropolitan Police  ...  51.495710            2
+201101BS70003            2011  Metropolitan Police  ...  51.489763            3
+201101BS70005            2011  Metropolitan Police  ...  51.497875            4
+201101BS70007            2011  Metropolitan Police  ...  51.482671            1
+
+[5 rows x 32 columns]
+[2023-01-04T11:39:01.895+0000] {logging_mixin.py:137} INFO -                 accident_year         police_force  ...   latitude  week_number
+accident_index                                      ...                        
+201101BS70001            2011  Metropolitan Police  ...  51.495766            2
+201101BS70002            2011  Metropolitan Police  ...  51.495710            2
+201101BS70003            2011  Metropolitan Police  ...  51.489763            3
+201101BS70005            2011  Metropolitan Police  ...  51.497875            4
+201101BS70007            2011  Metropolitan Police  ...  51.482671            1
+
+[5 rows x 32 columns]
+[2023-01-04T11:39:03.254+0000] {logging_mixin.py:137} INFO -                 accident_year  ...  road_surface_conditions_Wet or damp
+accident_index                 ...                                     
+201101BS70001            2011  ...                                    1
+201101BS70002            2011  ...                                    1
+201101BS70003            2011  ...                                    0
+201101BS70005            2011  ...                                    0
+201101BS70007            2011  ...                                    1
+
+[5 rows x 46 columns]
+[2023-01-04T11:39:05.525+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-01-04T11:39:05.563+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=accidents_pipeline, task_id=encoding, execution_date=20230102T000000, start_date=20230104T113900, end_date=20230104T113905
+[2023-01-04T11:39:05.630+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-04T11:39:05.670+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-01-04T12:02:52.959+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.encoding scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-04T12:02:53.069+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.encoding scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-04T12:02:53.070+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-04T12:02:53.071+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2023-01-04T12:02:53.072+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-04T12:02:53.096+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): encoding> on 2023-01-02 00:00:00+00:00
+[2023-01-04T12:02:53.104+0000] {standard_task_runner.py:55} INFO - Started process 1229 to run task
+[2023-01-04T12:02:53.109+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'accidents_pipeline', 'encoding', 'scheduled__2023-01-02T00:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/Airflow.py', '--cfg-path', '/tmp/tmpi1r5lmt7']
+[2023-01-04T12:02:53.112+0000] {standard_task_runner.py:83} INFO - Job 13: Subtask encoding
+[2023-01-04T12:02:53.210+0000] {task_command.py:389} INFO - Running <TaskInstance: accidents_pipeline.encoding scheduled__2023-01-02T00:00:00+00:00 [running]> on host 0eb9bfbdd4ca
+[2023-01-04T12:02:53.315+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=accidents_pipeline
+AIRFLOW_CTX_TASK_ID=encoding
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-02T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-02T00:00:00+00:00
+[2023-01-04T12:02:54.771+0000] {logging_mixin.py:137} INFO -                 accident_year         police_force  ...   latitude  week_number
+accident_index                                      ...                        
+201101BS70001            2011  Metropolitan Police  ...  51.495766            2
+201101BS70002            2011  Metropolitan Police  ...  51.495710            2
+201101BS70003            2011  Metropolitan Police  ...  51.489763            3
+201101BS70005            2011  Metropolitan Police  ...  51.497875            4
+201101BS70007            2011  Metropolitan Police  ...  51.482671            1
+
+[5 rows x 32 columns]
+[2023-01-04T12:02:54.912+0000] {logging_mixin.py:137} INFO -                 accident_year         police_force  ...   latitude  week_number
+accident_index                                      ...                        
+201101BS70001            2011  Metropolitan Police  ...  51.495766            2
+201101BS70002            2011  Metropolitan Police  ...  51.495710            2
+201101BS70003            2011  Metropolitan Police  ...  51.489763            3
+201101BS70005            2011  Metropolitan Police  ...  51.497875            4
+201101BS70007            2011  Metropolitan Police  ...  51.482671            1
+
+[5 rows x 32 columns]
+[2023-01-04T12:02:56.703+0000] {logging_mixin.py:137} INFO -                 accident_year  ...  road_surface_conditions_Wet or damp
+accident_index                 ...                                     
+201101BS70001            2011  ...                                    1
+201101BS70002            2011  ...                                    1
+201101BS70003            2011  ...                                    0
+201101BS70005            2011  ...                                    0
+201101BS70007            2011  ...                                    1
+
+[5 rows x 46 columns]
+[2023-01-04T12:02:59.041+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-01-04T12:02:59.053+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=accidents_pipeline, task_id=encoding, execution_date=20230102T000000, start_date=20230104T120253, end_date=20230104T120259
+[2023-01-04T12:02:59.109+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-04T12:02:59.148+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-01-04T12:28:08.792+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.encoding scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-04T12:28:08.880+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.encoding scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-04T12:28:08.881+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-04T12:28:08.882+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2023-01-04T12:28:08.882+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-04T12:28:08.897+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): encoding> on 2023-01-02 00:00:00+00:00
+[2023-01-04T12:28:08.903+0000] {standard_task_runner.py:55} INFO - Started process 3883 to run task
+[2023-01-04T12:28:08.906+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'accidents_pipeline', 'encoding', 'scheduled__2023-01-02T00:00:00+00:00', '--job-id', '31', '--raw', '--subdir', 'DAGS_FOLDER/Airflow.py', '--cfg-path', '/tmp/tmpe0f0bmkw']
+[2023-01-04T12:28:08.909+0000] {standard_task_runner.py:83} INFO - Job 31: Subtask encoding
+[2023-01-04T12:28:08.976+0000] {task_command.py:389} INFO - Running <TaskInstance: accidents_pipeline.encoding scheduled__2023-01-02T00:00:00+00:00 [running]> on host 0eb9bfbdd4ca
+[2023-01-04T12:28:09.052+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=accidents_pipeline
+AIRFLOW_CTX_TASK_ID=encoding
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-02T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-02T00:00:00+00:00
+[2023-01-04T12:28:09.910+0000] {logging_mixin.py:137} INFO -                 accident_year         police_force  ...   latitude  week_number
+accident_index                                      ...                        
+201101BS70001            2011  Metropolitan Police  ...  51.495766            2
+201101BS70002            2011  Metropolitan Police  ...  51.495710            2
+201101BS70003            2011  Metropolitan Police  ...  51.489763            3
+201101BS70005            2011  Metropolitan Police  ...  51.497875            4
+201101BS70007            2011  Metropolitan Police  ...  51.482671            1
+
+[5 rows x 32 columns]
+[2023-01-04T12:28:10.024+0000] {logging_mixin.py:137} INFO -                 accident_year         police_force  ...   latitude  week_number
+accident_index                                      ...                        
+201101BS70001            2011  Metropolitan Police  ...  51.495766            2
+201101BS70002            2011  Metropolitan Police  ...  51.495710            2
+201101BS70003            2011  Metropolitan Police  ...  51.489763            3
+201101BS70005            2011  Metropolitan Police  ...  51.497875            4
+201101BS70007            2011  Metropolitan Police  ...  51.482671            1
+
+[5 rows x 32 columns]
+[2023-01-04T12:28:11.345+0000] {logging_mixin.py:137} INFO -                 accident_year  ...  road_surface_conditions_Wet or damp
+accident_index                 ...                                     
+201101BS70001            2011  ...                                    1
+201101BS70002            2011  ...                                    1
+201101BS70003            2011  ...                                    0
+201101BS70005            2011  ...                                    0
+201101BS70007            2011  ...                                    1
+
+[5 rows x 46 columns]
+[2023-01-04T12:28:13.290+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-01-04T12:28:13.301+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=accidents_pipeline, task_id=encoding, execution_date=20230102T000000, start_date=20230104T122808, end_date=20230104T122813
+[2023-01-04T12:28:13.333+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-04T12:28:13.369+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check

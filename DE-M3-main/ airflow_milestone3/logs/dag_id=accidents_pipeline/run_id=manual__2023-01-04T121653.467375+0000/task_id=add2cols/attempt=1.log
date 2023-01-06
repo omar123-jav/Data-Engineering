@@ -1,0 +1,23 @@
+[2023-01-04T12:18:01.071+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.add2cols manual__2023-01-04T12:16:53.467375+00:00 [queued]>
+[2023-01-04T12:18:01.097+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.add2cols manual__2023-01-04T12:16:53.467375+00:00 [queued]>
+[2023-01-04T12:18:01.099+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-04T12:18:01.100+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2023-01-04T12:18:01.101+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-04T12:18:01.145+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): add2cols> on 2023-01-04 12:16:53.467375+00:00
+[2023-01-04T12:18:01.155+0000] {standard_task_runner.py:55} INFO - Started process 2809 to run task
+[2023-01-04T12:18:01.162+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'accidents_pipeline', 'add2cols', 'manual__2023-01-04T12:16:53.467375+00:00', '--job-id', '24', '--raw', '--subdir', 'DAGS_FOLDER/Airflow.py', '--cfg-path', '/tmp/tmpwtlgxpeu']
+[2023-01-04T12:18:01.167+0000] {standard_task_runner.py:83} INFO - Job 24: Subtask add2cols
+[2023-01-04T12:18:01.290+0000] {task_command.py:389} INFO - Running <TaskInstance: accidents_pipeline.add2cols manual__2023-01-04T12:16:53.467375+00:00 [running]> on host 0eb9bfbdd4ca
+[2023-01-04T12:18:01.510+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=accidents_pipeline
+AIRFLOW_CTX_TASK_ID=add2cols
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-04T12:16:53.467375+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-04T12:16:53.467375+00:00
+[2023-01-04T12:18:06.645+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-01-04T12:18:06.658+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=accidents_pipeline, task_id=add2cols, execution_date=20230104T121653, start_date=20230104T121801, end_date=20230104T121806
+[2023-01-04T12:18:06.700+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-04T12:18:06.740+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check

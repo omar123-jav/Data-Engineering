@@ -1,0 +1,96 @@
+[2023-01-04T11:38:23.041+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.extract_dataset scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-04T11:38:23.058+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.extract_dataset scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-04T11:38:23.058+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-04T11:38:23.059+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2023-01-04T11:38:23.060+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-04T11:38:23.083+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): extract_dataset> on 2023-01-02 00:00:00+00:00
+[2023-01-04T11:38:23.091+0000] {standard_task_runner.py:55} INFO - Started process 642 to run task
+[2023-01-04T11:38:23.097+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'accidents_pipeline', 'extract_dataset', 'scheduled__2023-01-02T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/Airflow.py', '--cfg-path', '/tmp/tmp84xxcyol']
+[2023-01-04T11:38:23.101+0000] {standard_task_runner.py:83} INFO - Job 2: Subtask extract_dataset
+[2023-01-04T11:38:23.202+0000] {task_command.py:389} INFO - Running <TaskInstance: accidents_pipeline.extract_dataset scheduled__2023-01-02T00:00:00+00:00 [running]> on host 110f611c23f4
+[2023-01-04T11:38:23.349+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=accidents_pipeline
+AIRFLOW_CTX_TASK_ID=extract_dataset
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-02T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-02T00:00:00+00:00
+[2023-01-04T11:38:25.054+0000] {logging_mixin.py:137} WARNING - /home/***/.local/lib/python3.7/site-packages/***/operators/python.py:192 DtypeWarning: Columns (35) have mixed types.Specify dtype option on import or set low_memory=False.
+[2023-01-04T11:38:46.381+0000] {logging_mixin.py:137} INFO - Method: Z-score
+[2023-01-04T11:38:46.386+0000] {logging_mixin.py:137} INFO - Count Of Outliers:  3298 from 151474
+[2023-01-04T11:38:46.387+0000] {logging_mixin.py:137} INFO - Outliers Unique Values [ 4  5  6  7  8  9 10 11 12 29 34]
+[2023-01-04T11:38:46.387+0000] {logging_mixin.py:137} INFO - Percentage Of Outliers:  2.177 %
+[2023-01-04T11:38:46.394+0000] {logging_mixin.py:137} INFO - Method: IQR
+[2023-01-04T11:38:46.396+0000] {logging_mixin.py:137} INFO - Count Of Outliers:  34597 from 151474
+[2023-01-04T11:38:46.397+0000] {logging_mixin.py:137} INFO - Outliers Unique Values [ 2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 18 21 22 25 26 51 63 87]
+[2023-01-04T11:38:46.397+0000] {logging_mixin.py:137} INFO - Percentage Of Outliers:  22.84 %
+[2023-01-04T11:38:48.979+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-01-04T11:38:48.990+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=accidents_pipeline, task_id=extract_dataset, execution_date=20230102T000000, start_date=20230104T113823, end_date=20230104T113848
+[2023-01-04T11:38:49.024+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-04T11:38:49.058+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-01-04T12:02:06.946+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.extract_dataset scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-04T12:02:06.986+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.extract_dataset scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-04T12:02:06.987+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-04T12:02:06.988+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2023-01-04T12:02:06.990+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-04T12:02:07.032+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): extract_dataset> on 2023-01-02 00:00:00+00:00
+[2023-01-04T12:02:07.041+0000] {standard_task_runner.py:55} INFO - Started process 1142 to run task
+[2023-01-04T12:02:07.049+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'accidents_pipeline', 'extract_dataset', 'scheduled__2023-01-02T00:00:00+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/Airflow.py', '--cfg-path', '/tmp/tmpueeoivnx']
+[2023-01-04T12:02:07.054+0000] {standard_task_runner.py:83} INFO - Job 11: Subtask extract_dataset
+[2023-01-04T12:02:07.180+0000] {task_command.py:389} INFO - Running <TaskInstance: accidents_pipeline.extract_dataset scheduled__2023-01-02T00:00:00+00:00 [running]> on host 0eb9bfbdd4ca
+[2023-01-04T12:02:07.309+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=accidents_pipeline
+AIRFLOW_CTX_TASK_ID=extract_dataset
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-02T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-02T00:00:00+00:00
+[2023-01-04T12:02:08.911+0000] {logging_mixin.py:137} WARNING - /home/***/.local/lib/python3.7/site-packages/***/operators/python.py:192 DtypeWarning: Columns (35) have mixed types.Specify dtype option on import or set low_memory=False.
+[2023-01-04T12:02:34.491+0000] {logging_mixin.py:137} INFO - Method: Z-score
+[2023-01-04T12:02:34.494+0000] {logging_mixin.py:137} INFO - Count Of Outliers:  3298 from 151474
+[2023-01-04T12:02:34.495+0000] {logging_mixin.py:137} INFO - Outliers Unique Values [ 4  5  6  7  8  9 10 11 12 29 34]
+[2023-01-04T12:02:34.495+0000] {logging_mixin.py:137} INFO - Percentage Of Outliers:  2.177 %
+[2023-01-04T12:02:34.503+0000] {logging_mixin.py:137} INFO - Method: IQR
+[2023-01-04T12:02:34.506+0000] {logging_mixin.py:137} INFO - Count Of Outliers:  34597 from 151474
+[2023-01-04T12:02:34.507+0000] {logging_mixin.py:137} INFO - Outliers Unique Values [ 2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 18 21 22 25 26 51 63 87]
+[2023-01-04T12:02:34.507+0000] {logging_mixin.py:137} INFO - Percentage Of Outliers:  22.84 %
+[2023-01-04T12:02:37.736+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-01-04T12:02:37.748+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=accidents_pipeline, task_id=extract_dataset, execution_date=20230102T000000, start_date=20230104T120206, end_date=20230104T120237
+[2023-01-04T12:02:37.820+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-04T12:02:37.907+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-01-04T12:27:23.459+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.extract_dataset scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-04T12:27:23.487+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.extract_dataset scheduled__2023-01-02T00:00:00+00:00 [queued]>
+[2023-01-04T12:27:23.488+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-04T12:27:23.488+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2023-01-04T12:27:23.489+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-04T12:27:23.510+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): extract_dataset> on 2023-01-02 00:00:00+00:00
+[2023-01-04T12:27:23.516+0000] {standard_task_runner.py:55} INFO - Started process 3811 to run task
+[2023-01-04T12:27:23.521+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'accidents_pipeline', 'extract_dataset', 'scheduled__2023-01-02T00:00:00+00:00', '--job-id', '29', '--raw', '--subdir', 'DAGS_FOLDER/Airflow.py', '--cfg-path', '/tmp/tmpweyzx49v']
+[2023-01-04T12:27:23.525+0000] {standard_task_runner.py:83} INFO - Job 29: Subtask extract_dataset
+[2023-01-04T12:27:23.614+0000] {task_command.py:389} INFO - Running <TaskInstance: accidents_pipeline.extract_dataset scheduled__2023-01-02T00:00:00+00:00 [running]> on host 0eb9bfbdd4ca
+[2023-01-04T12:27:23.711+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=accidents_pipeline
+AIRFLOW_CTX_TASK_ID=extract_dataset
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-02T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-02T00:00:00+00:00
+[2023-01-04T12:27:25.179+0000] {logging_mixin.py:137} WARNING - /home/***/.local/lib/python3.7/site-packages/***/operators/python.py:192 DtypeWarning: Columns (35) have mixed types.Specify dtype option on import or set low_memory=False.
+[2023-01-04T12:27:51.493+0000] {logging_mixin.py:137} INFO - Method: Z-score
+[2023-01-04T12:27:51.496+0000] {logging_mixin.py:137} INFO - Count Of Outliers:  3298 from 151474
+[2023-01-04T12:27:51.497+0000] {logging_mixin.py:137} INFO - Outliers Unique Values [ 4  5  6  7  8  9 10 11 12 29 34]
+[2023-01-04T12:27:51.498+0000] {logging_mixin.py:137} INFO - Percentage Of Outliers:  2.177 %
+[2023-01-04T12:27:51.507+0000] {logging_mixin.py:137} INFO - Method: IQR
+[2023-01-04T12:27:51.511+0000] {logging_mixin.py:137} INFO - Count Of Outliers:  34597 from 151474
+[2023-01-04T12:27:51.513+0000] {logging_mixin.py:137} INFO - Outliers Unique Values [ 2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 18 21 22 25 26 51 63 87]
+[2023-01-04T12:27:51.513+0000] {logging_mixin.py:137} INFO - Percentage Of Outliers:  22.84 %
+[2023-01-04T12:27:54.520+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-01-04T12:27:54.530+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=accidents_pipeline, task_id=extract_dataset, execution_date=20230102T000000, start_date=20230104T122723, end_date=20230104T122754
+[2023-01-04T12:27:54.583+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-04T12:27:54.612+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check

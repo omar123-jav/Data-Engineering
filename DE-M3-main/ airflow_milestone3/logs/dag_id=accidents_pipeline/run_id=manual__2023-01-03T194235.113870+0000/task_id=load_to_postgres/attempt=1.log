@@ -1,0 +1,24 @@
+[2023-01-03T19:44:03.459+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.load_to_postgres manual__2023-01-03T19:42:35.113870+00:00 [queued]>
+[2023-01-03T19:44:03.472+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: accidents_pipeline.load_to_postgres manual__2023-01-03T19:42:35.113870+00:00 [queued]>
+[2023-01-03T19:44:03.473+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-03T19:44:03.474+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 2
+[2023-01-03T19:44:03.474+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-03T19:44:03.492+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): load_to_postgres> on 2023-01-03 19:42:35.113870+00:00
+[2023-01-03T19:44:03.498+0000] {standard_task_runner.py:55} INFO - Started process 5046 to run task
+[2023-01-03T19:44:03.502+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'accidents_pipeline', 'load_to_postgres', 'manual__2023-01-03T19:42:35.113870+00:00', '--job-id', '71', '--raw', '--subdir', 'DAGS_FOLDER/Airflow.py', '--cfg-path', '/tmp/tmpck9a87r4']
+[2023-01-03T19:44:03.504+0000] {standard_task_runner.py:83} INFO - Job 71: Subtask load_to_postgres
+[2023-01-03T19:44:03.579+0000] {task_command.py:389} INFO - Running <TaskInstance: accidents_pipeline.load_to_postgres manual__2023-01-03T19:42:35.113870+00:00 [running]> on host 321b86f85270
+[2023-01-03T19:44:03.671+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=accidents_pipeline
+AIRFLOW_CTX_TASK_ID=load_to_postgres
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-03T19:42:35.113870+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-03T19:42:35.113870+00:00
+[2023-01-03T19:44:04.658+0000] {logging_mixin.py:137} INFO - connected succesfully
+[2023-01-03T19:44:53.479+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-01-03T19:44:53.491+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=accidents_pipeline, task_id=load_to_postgres, execution_date=20230103T194235, start_date=20230103T194403, end_date=20230103T194453
+[2023-01-03T19:44:53.566+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-03T19:44:53.628+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check
